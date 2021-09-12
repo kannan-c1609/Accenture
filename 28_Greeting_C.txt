@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main()
+{
+    char seq[30];
+    scanf("%s", seq);
+    printf("Hello %s!", seq);
+    return 0;
+}

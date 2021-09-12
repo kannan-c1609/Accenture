@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<math.h>
+
+int fun(int b, int e, int m)
+{
+    int s = (int)pow(b, e) % m;
+    return s % m;
+}
+
+int main()
+{
+    int b, e, m;
+    scanf("%d %d %d", &b, &e, &m);
+    printf("%d", fun(b, e, m));
+    return 0;
+}

@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int fun(int a, int b, int n)
+{
+    int d = b - a;
+    int first = a - d;
+    return (first + (n-1) *d);
+}
+int main()
+{
+    int a, b, n;
+    scanf("%d %d %d", &a, &b, &n);
+    printf("%d", fun(a, b, n));
+    return 0;
+}
