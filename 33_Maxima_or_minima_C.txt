@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+int fun(int a, int b, int c)
+{
+    return (a * (-1*-1)) + (b * -1) + c;
+}
+int main()
+{
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    printf("%d", fun(a, b, c));
+    return 0;
+}
