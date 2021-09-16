@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std ;
+
+int main() 
+{
+    double s , t , n , sum = 0 ;
+    cin >> s >> t >> n ;
+    double r = t/s ;
+    double f = s/r ;
+ 
+    while(n--)
+    {
+        sum = sum + f ;
+        f *= r ;
+    }
+    cout << sum ;
+    
+	return 0 ;
+}
+
+
+
+
+
+
+
+
+
+
+
