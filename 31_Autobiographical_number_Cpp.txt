@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std ;
+
+int main() 
+{
+    string s ;
+    cin >> s ;
+    
+    int occurence[10] ;
+    memset(occurence, 0, sizeof(occurence)) ;
+    
+    for(int i = 0 ; s[i] ; i++)
+    {
+        occurence[s[i]-'0']++ ;
+    }
+    
+    for(int i = 0 ; s[i] ; i++)
+    {
+        if((s[i]-'0') != occurence[i])
+        {
+            cout << "0" ;
+            exit(0) ;
+        }
+    }
+    cout << "1" ;
+    
+	return 0 ;
+}
+

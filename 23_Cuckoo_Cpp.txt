@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std ;
+
+int main() 
+{
+    int n , term , j , m ;
+    cin >> n ;
+    vector<int>cuckoo ;
+    cuckoo.push_back(0) ;
+    cuckoo.push_back(1) ;
+    if(n<3) cout << n-1 ;
+    else
+    {
+        m = 2 ;
+        while(m<n)
+        {
+            term = 0 ;
+            j = 1 ;
+            for(int i = cuckoo.size()-1 ; i>=0 ; i--, j++)
+            {
+                term = term + j*cuckoo[i] ; 
+            }
+            m++ ;
+            cuckoo.push_back(term+m) ;
+        }
+        cout << cuckoo[n-1] ;
+    }
+	return 0 ;
+}

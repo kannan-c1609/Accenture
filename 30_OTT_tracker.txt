@@ -1,0 +1,47 @@
+
+#include<bits/stdc++.h>
+using namespace std ;
+
+int myCompare(string X, string Y)
+{
+	string XY = X.append(Y);
+	string YX = Y.append(X);
+
+	return XY.compare(YX) > 0 ? 1 : 0;
+}
+
+void get_maximum_possible(vector<string> arr)
+{
+	sort(arr.begin(), arr.end(), myCompare);
+
+	for (int i = 0; i < arr.size(); i++)
+		cout << arr[i];
+}
+
+int main() 
+{
+    int n , j , num ;
+    cin >> n ;
+    vector<string>arr ;
+    string str ;
+    
+    for(int i = 0 ; i<n ; i++)
+    {
+        cin >> str ;
+        j = 1 ;
+        num  = 0 ;
+        for(int i = str.length()-1 ; i>= 0 ; i--)
+        {
+            num = num + (str[i]-'A'+1)*j ;
+            j *= 26 ;
+        }
+        str = to_string(num) ;
+        arr.push_back(str) ;
+    }
+    
+    get_maximum_possible(arr) ;
+    
+	return 0 ;
+}
+
+
